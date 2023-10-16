@@ -1,0 +1,120 @@
+import java.util.Scanner;
+
+public class Main {
+    static void Addition() {
+        Scanner number = new Scanner(System.in);
+        System.out.println("Enter the first number you want to add: ");
+        int Num1 = number.nextInt();
+        
+        System.out.println("Enter the second number you want to add: ");
+        int Num2 = number.nextInt();
+        
+        int sum = Num1 + Num2;
+        System.out.println("The sum of " + Num1 + " and " + Num2 + " is " + sum + "." );
+    }
+    
+    static void Subtraction() {
+        Scanner number = new Scanner(System.in);
+        System.out.println("Enter the Minuend: ");
+        int Num1 = number.nextInt();
+        
+        System.out.println("Enter the Subtrahend: ");
+        int Num2 = number.nextInt();
+        
+        int difference = Num1 - Num2;
+        System.out.println("The difference of " + Num1 + " and " + Num2 + " is " + difference + "." );
+    }
+    
+    static void Multiplication() {
+        Scanner number = new Scanner(System.in);
+        System.out.println("Enter the Multiplicand: ");
+        int Num1 = number.nextInt();
+        
+        System.out.println("Enter the Multiplier: ");
+        int Num2 = number.nextInt();
+        
+        int product = Num1 * Num2;
+        System.out.println("The product of " + Num1 + " and " + Num2 + " is " + product + "." );
+    }
+    
+    static void Division() {
+        Scanner number = new Scanner(System.in);
+        System.out.println("Enter the Dividend: ");
+        int Num1 = number.nextInt();
+        
+        System.out.println("Enter the Divisor: ");
+        int Num2 = number.nextInt();
+        
+        int Quotient = Num1 / Num2;
+        System.out.println("The Quotient of " + Num1 + " and " + Num2 + " is " + Quotient + "." );
+    }
+    
+    static void Modulo() {
+        Scanner number = new Scanner(System.in);
+        System.out.println("Enter the Dividend: ");
+        int Num1 = number.nextInt();
+        
+        System.out.println("Enter the Divisor: ");
+        int Num2 = number.nextInt();
+        
+        int Quotient = Num1 % Num2;
+        System.out.println("The Modulo of " + Num1 + " and " + Num2 + " is " + Quotient + "." );
+    }
+    
+    static boolean continueusing() {
+        Scanner yesorno = new Scanner(System.in);
+        System.out.println("Do you want to continue using the Manaloskies calculator? (yes/no)");
+        String response = yesorno.next().toLowerCase();
+        return response.equals("yes");
+    }
+    
+    static void Calculator() {
+    Scanner number = new Scanner(System.in);
+		System.out.println("Please input what operation do you want to use.");
+		System.out.println("1 = Addition. 2 = Subtraction. 3 = Multiplication. 4 = Division. 5 = Modulo");
+		int Operation = number.nextInt();
+		
+		switch (Operation) {
+		    case 1:
+		        Addition();
+		        break;
+		
+		    case 2:
+		        Subtraction();
+		        break;
+		
+		    case 3:
+		        Multiplication();
+		        break;
+		
+		    case 4:
+		        Division();
+		        break;
+		
+		    case 5:
+		        Modulo();
+		        break;
+		    
+		    default:
+		        System.out.println("Please input between 1-5 only. Please repeat the code.");
+		        break;
+		        
+		
+		}
+    }
+    
+	public static void main(String[] args) {
+	    System.out.println("Welcome to Manaloskies calculator!");
+	    
+	    boolean continueCalculator = true;
+	    
+	    while (continueCalculator) {
+            Calculator();
+
+            continueCalculator = continueusing();
+        }
+
+        System.out.println("Thank you for using the calculator!");
+    }
+		
+}
